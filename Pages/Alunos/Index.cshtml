@@ -1,0 +1,138 @@
+﻿@page
+@model WebEscola.Pages.Alunos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+
+<form>
+    <p>
+        <select asp-for="EstadoAluno" asp-items="Model.Estados">
+            <option value="">Todos</option>
+        </select>
+
+        Nome: <input type="text" asp-for="BuscaNome" />
+        <input type="submit" value="Buscar" />
+    </p>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                   asp-route-currentFilter="@Model.FilterNome">
+                    @Html.DisplayNameFor(model => model.Aluno[0].Nome)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aluno[0].Sobrenome)
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
+                   asp-route-currentFilter="@Model.FilterNome">
+                    @Html.DisplayNameFor(model => model.Aluno[0].Data)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aluno[0].Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Aluno)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sobrenome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.AlunoID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.AlunoID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.AlunoID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+
+    var prevDisabled = !Model.Aluno.HasPreviousPage ? "disabled" : "";
+
+    var nextDisabled = !Model.Aluno.HasNextPage ? "disabled" : "";
+
+}
+
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Aluno.PageIndex - 1)"
+   asp-route-filterNome="@Model.FilterNome"
+   asp-route-filterEstado="@Model.FilterEstado"
+   class="btn btn-primary @prevDisabled">
+
+    Anterior
+
+</a>
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Aluno.PageIndex + 1)"
+   asp-route-filterNome="@Model.FilterNome"
+   asp-route-filterEstado="@Model.FilterEstado"
+   class="btn btn-primary @nextDisabled">
+
+    Próximo
+
+</a>
+
+<br />
+
+<br>
+
+<div>
+
+    <h6>Página @Model.Aluno.PageIndex de  @Model.Aluno.TotalPages</h6>
+
+</div>
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Aluno.PageIndex - 1)"
+   asp-route-filterNome="@Model.FilterNome"
+   asp-route-filterEstado="@Model.FilterEstado"
+   class="btn btn-primary @prevDisabled">
+
+    Anterior
+
+</a>
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Aluno.PageIndex + 1)"
+   asp-route-filterNome="@Model.FilterNome"
+   asp-route-filterEstado="@Model.FilterEstado"
+   class="btn btn-primary @nextDisabled">
+
+    Próximo
+
+</a>
