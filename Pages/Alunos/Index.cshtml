@@ -83,32 +83,6 @@
 }
 
 
-<a asp-page="./Index"
-   asp-route-sortOrder="@Model.CurrentSort"
-   asp-route-pageIndex="@(Model.Aluno.PageIndex - 1)"
-   asp-route-filterNome="@Model.FilterNome"
-   asp-route-filterEstado="@Model.FilterEstado"
-   class="btn btn-primary @prevDisabled">
-
-    Anterior
-
-</a>
-
-<a asp-page="./Index"
-   asp-route-sortOrder="@Model.CurrentSort"
-   asp-route-pageIndex="@(Model.Aluno.PageIndex + 1)"
-   asp-route-filterNome="@Model.FilterNome"
-   asp-route-filterEstado="@Model.FilterEstado"
-   class="btn btn-primary @nextDisabled">
-
-    Próximo
-
-</a>
-
-<br />
-
-<br>
-
 <div>
 
     <h6>Página @Model.Aluno.PageIndex de  @Model.Aluno.TotalPages</h6>

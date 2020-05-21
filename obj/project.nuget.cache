@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jNkOVBjV/sebiH4breKTBeK3s9afVegGAscQc3zFSo0CHqQyqAFcBhhyrv3NbLRaAY/Lk5PAW1Yyc5EJD/IN4g==",
+  "dgSpecHash": "kNZA/ddSbnYfEItRYwnwxkwAMH8YgcKCBiNeA1c+r9v4B0Mu25EXCqIaEgeB3y98V2NAXncZyB31fQL/gY6PeA==",
   "success": true,
   "projectFilePath": "D:\\ProjetosCSharp\\WebEscola\\WebEscola.csproj",
   "expectedPackageFiles": [
@@ -166,7 +166,8 @@
     "C:\\Users\\josuecamelo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\josuecamelo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\josuecamelo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\josuecamelo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\josuecamelo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\josuecamelo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

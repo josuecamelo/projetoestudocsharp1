@@ -20,6 +20,7 @@ namespace WebEscola.Models
                 serviceProvider.GetRequiredService<DbContextOptions<WebEscolaContext>>()))
 
             {
+                context.Database.EnsureCreated();
 
                 if (context.Aluno.Any()) { return; }
 
